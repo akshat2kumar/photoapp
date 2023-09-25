@@ -1,0 +1,225 @@
+.main{
+   margin-left: 20%;
+   width: 80%;
+   height: 88vh;
+   background-color: white;
+   overflow: hidden;
+   display: flex;
+   position: relative;
+   
+   .image-folderdiv{
+   
+      position: absolute;
+      left: 0;
+      width:100%;
+      height: 100%;    
+      display: flex;
+      flex-direction: row;
+      padding-top: 50px;
+      gap: 50px;
+      background: linear-gradient(to top, rgb(136, 188, 188) , rgba(72, 77, 105, 0) 20%);
+      overflow-y: scroll;
+      
+      .imagefolder{
+         width: 200px;
+         height: 250px;
+         
+         text-align: center;
+         .folderimg{
+            width: 200px;
+            border-radius: 50px 28px 50px 28px; 
+         }
+      }
+      .addfolderbutton{
+         position: absolute;
+         left: 0;
+         bottom: 60px;
+         width: 60px;
+         height: 60px;
+         color: aliceblue;
+         cursor: pointer;
+         
+      }
+   }
+   .foldercreatediv{
+      width: 250px;
+      height: 60px;
+      background-color: rgb(169, 206, 193);
+      position: absolute;
+      left: 20px;
+      bottom: 100px;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+
+      .enterfoldername{
+         margin-left: 12px;
+         height: 30px;
+      }
+      .foldercreatesubmit{
+         margin-left: 12px;
+         width: 50px;
+         height: 30px;
+         background-color: #2687f0;
+         color: white;
+         border: none;
+         border-radius: 3px;
+      }
+      
+   }
+   .imagesshowndiv{
+      position: absolute;
+      left: 0;
+      width:100%;
+      height: 100%;  
+      background-color: rgb(196, 216, 215);
+
+      .imagesshown{
+         width: 90%;
+         height: 80%;
+         display: grid;
+         padding: 5%;
+         grid-template-columns: repeat(4,21%);
+         gap:5%;
+         row-gap: 60px;
+         overflow-y: scroll;
+         .videoshow{
+            width: 20px;
+            height: 20px;
+         }
+         .backtofolder{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 15px;
+            top: 20px;
+            color: rgb(70, 68, 68);
+            cursor: pointer;
+         }
+         .imagelistitem{
+            width: 100%;
+            height: 200px;
+         }
+         .addimgbutton{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 60px;
+            color: aliceblue;
+            cursor: pointer;
+            
+         }
+         .uploadimg{
+            position: absolute;
+            left: 80px;
+            bottom: 30px;
+            background-color: white;
+            width: 300px;
+            height: 150px;
+            padding: 10px;
+            .browse{
+               background-color: aqua;
+            }
+
+            .upload {
+               background-color: #007bff; 
+               color: #fff; 
+               padding: 8px 16px; 
+               cursor: pointer;
+               border: none; 
+               border-radius: 4px;
+               margin-top: 10px;
+             }
+             
+            
+         }
+      }
+     
+
+   }
+   .singleimagesshown{  
+      position: absolute;
+      left: 0;
+      width:100%;
+      height: 100%;
+      background: rgba(64, 63, 63, 0.5);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .image{
+        
+        width: 60%;
+        height: 60%;
+      }
+      .forward{
+      width: 30px;
+      height: 30px;
+      color: white;  
+      margin-left: 20px;
+      }
+      .backward{
+         width: 30px;
+         height: 30px;
+         color: white; 
+         margin-right: 20px;
+      }
+      .imagedelete{
+         position: absolute;
+         left: 49%;
+         bottom: 60px;
+         width: 30px;
+         height: 30px;
+         color: red;
+      }
+      .closeimage{
+      position: absolute;
+      right: 60px;
+      top: 60px;
+      width: 30px;
+      height: 30px;
+      color: white;
+
+      }
+      .videoshow{
+      position: absolute;
+      left: 60px;
+      bottom: 60px;
+      width: 60px;
+      height: 30px;
+      color: rgb(56, 30, 231); 
+      }
+      .slidediv{       
+         padding-left: 60px;
+         width: 600px;
+         height: 400px;
+         animation: play 15s linear infinite;
+            @keyframes play {
+               0%{
+                  transform: translateX(0);
+               }
+               100%{
+                  transform: translateX(calc(-250px*6));
+               }
+            }
+         .slide{
+            
+            width: 600px;
+            height: 400px;
+            display: grid;
+            place-items: center;
+            .imageslide{
+               
+               width: 100%;
+               height: 100%;
+            }
+      }
+      
+      }
+     
+   }
+  
+ 
+
+}
